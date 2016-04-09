@@ -1,13 +1,18 @@
 {
-  "name": "electron-boilerplate",
-  "productName": "Electron Boilerplate",
-  "description": "Starter for your Electron application. Out of the box ready for serious stuff.",
+  "name": "electron-ng-todo",
+  "productName": "ngTodoMVC Electron",
+  "description": "Todo MVC project in AngularJS launch in electron project",
   "version": "0.1.0",
-  "author": "Mr Gumby",
-  "copyright": "© 2016, your company here",
+  "author": "Mehdi Betari",
+  "copyright": "© 2016, cieljaune on github",
   "main": "background.js",
   "dependencies": {
-    "fs-jetpack": "^0.7.0"
+    "fs-jetpack": "^0.7.0",
+    "angular": "^1.4.3",
+    "todomvc-common": "^1.0.0",
+    "todomvc-app-css": "^1.0.1",
+    "angular-route": "^ 1.4.3",
+    "angular-resource": "^1.4.3"
   },
   "osx": {
     "build": "1",

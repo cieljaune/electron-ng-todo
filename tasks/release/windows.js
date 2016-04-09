@@ -46,12 +46,12 @@ var packageBuiltApp = function () {
 var finalize = function () {
     var deferred = Q.defer();
 
-    projectDir.copy('resources/windows/icon.ico', readyAppDir.path('icon.ico'));
+    projectDir.copy('resources/windows/task.ico', readyAppDir.path('task.ico'));
 
     // Replace Electron icon for your own.
     var rcedit = require('rcedit');
     rcedit(readyAppDir.path('electron.exe'), {
-        'icon': projectDir.path('resources/windows/icon.ico'),
+        'icon': projectDir.path('resources/windows/task.ico'),
         'version-string': {
             'ProductName': manifest.productName,
             'FileDescription': manifest.description,
@@ -86,7 +86,7 @@ var createInstaller = function () {
         version: manifest.version,
         src: readyAppDir.path(),
         dest: releasesDir.path(finalPackageName),
-        icon: readyAppDir.path('icon.ico'),
+        icon: readyAppDir.path('task.ico'),
         setupIcon: projectDir.path('resources/windows/setup-icon.ico'),
         banner: projectDir.path('resources/windows/setup-banner.bmp'),
     });

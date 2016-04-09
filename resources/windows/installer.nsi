@@ -89,7 +89,7 @@ Section "Install"
 
     WriteRegStr HKLM "${regkey}" "Install_Dir" "$INSTDIR"
     WriteRegStr HKLM "${uninstkey}" "DisplayName" "${productName}"
-    WriteRegStr HKLM "${uninstkey}" "DisplayIcon" '"$INSTDIR\icon.ico"'
+    WriteRegStr HKLM "${uninstkey}" "DisplayIcon" '"$INSTDIR\task.ico"'
     WriteRegStr HKLM "${uninstkey}" "UninstallString" '"$INSTDIR\${uninstaller}"'
     WriteRegStr HKLM "${uninstkey}" "Publisher" "${author}"
     WriteRegStr HKLM "${uninstkey}" "DisplayVersion" "${version}"
@@ -104,9 +104,9 @@ Section "Install"
 
     ; Create start menu shortcut
     SetShellVarContext all
-    CreateShortCut "$SMPROGRAMS\${productName}.lnk" "$INSTDIR\${exec}" "" "$INSTDIR\icon.ico"
+    CreateShortCut "$SMPROGRAMS\${productName}.lnk" "$INSTDIR\${exec}" "" "$INSTDIR\task.ico"
     ; Create desktop shortcut
-    CreateShortCut "$DESKTOP\${productName}.lnk" "$INSTDIR\${exec}" "" "$INSTDIR\icon.ico"
+    CreateShortCut "$DESKTOP\${productName}.lnk" "$INSTDIR\${exec}" "" "$INSTDIR\task.ico"
 
     WriteUninstaller "${uninstaller}"
 

@@ -1,6 +1,7 @@
-electron-boilerplate
+electron-ng-todo
 ==============
 Comprehensive boilerplate application for [Electron runtime](http://electron.atom.io).  
+INCLUDE THE TODO MVC PROJECT IN ANGULARJS V1.X
 
 Scope of this project:
 
